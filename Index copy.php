@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Сайт с новостями</title>
+    <!-- Остальные мета-теги и стили -->
 </head>
 <body>
     <div class="header">
-        <div class="logo-container">
-            <!-- Ваш логотип здесь -->
-			<img src="img/logo.png" alt="Логотип">
-        </div>
+        <!-- Остальной код заголовка -->
     </div>
 
     <div class="container">
@@ -28,7 +22,7 @@
                     echo "<li>";
                     echo "<h2>" . $row["title"] . "</h2>";
                     echo "<p>" . $row["content"] . "</p>";
-                    echo "<p class='date'>Дата публикации: " . $row["publish_date"] . "</p>";
+                    echo "<p class='date'>Дата публикации: " . date('d.m.Y H:i:s', strtotime($row["publish_date"])) . "</p>"; // Добавлено отображение времени
                     echo "</li>";
                 }
             } else {
@@ -40,12 +34,8 @@
         </ul>
     </div>
 
-    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <p>© 2023 Ваше Имя. Все права защищены.</p>
-            <p>Email: ваш_email@example.com</p>
-		</div>
+        <!-- Остальной код футера -->
     </footer>
 </body>
 </html>

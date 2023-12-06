@@ -1,21 +1,49 @@
+:root {
+	--primary-bg: #000000;
+	/* Основной фон */
+	--secondary-bg: #f8f9fa;
+	/* Второстепенный фон */
+	--text-color: #343a40;
+	/* Цвет текста */
+	--link-color: #007BFF;
+	/* Цвет ссылок */
+	--link-hover-color: #0056b3;
+	/* Цвет ссылок при наведении */
+	--button-bg: #007BFF;
+	/* Цвет кнопок */
+	--button-hover-bg: #0056b3;
+	/* Цвет кнопок при наведении */
+	--footer-bg: #343a40;
+	/* Фон футера */
+	--footer-text: #ffffff;
+	/* Цвет текста футера */
+
+	--rich-black: #000814ff;
+	--oxford-blue: #001d3dff;
+	--yale-blue: #003566ff;
+	--mikado-yellow: #ffc300ff;
+	--gold: #ffd60aff;
+}
+
 body {
-	font-family: Arial, sans-serif;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	margin: 0;
 	padding: 0;
-	background-color: #f4f4f4;
+	background-color: #f8f9fa;
 }
 
 .container {
 	max-width: 800px;
 	margin: 50px auto;
-	background-color: #fff;
+	background-color: #ffffff;
 	padding: 20px;
 	border-radius: 8px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-	color: #333;
+	color: #007BFF;
+	text-align: center;
 }
 
 ul {
@@ -25,7 +53,8 @@ ul {
 
 li {
 	padding: 20px;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #ced4da;
+	background-color: #f8f9fa;
 }
 
 li:last-child {
@@ -33,9 +62,254 @@ li:last-child {
 }
 
 h2 {
-	color: #007BFF;
+	color: #343a40;
 }
 
 .date {
 	color: #868e96;
+}
+
+/* Hover effect for better interactivity */
+li:hover {
+	background-color: #e2e6ea;
+	transition: background-color 0.3s ease-in-out;
+}
+
+/* Добавленные стили для футера */
+footer {
+	background-color: #343a40;
+	color: #ffffff;
+	text-align: center;
+	padding: 20px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+.footer-content {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.footer-content p {
+	margin: 5px 0;
+}
+
+/* Обновленная цветовая схема */
+
+/* Цвета */
+:root {
+	--primary-bg: #000000;
+	/* Основной фон */
+	--secondary-bg: #f8f9fa;
+	/* Второстепенный фон */
+	--text-color: #343a40;
+	/* Цвет текста */
+	--link-color: #007BFF;
+	/* Цвет ссылок */
+	--link-hover-color: #0056b3;
+	/* Цвет ссылок при наведении */
+	--button-bg: #007BFF;
+	/* Цвет кнопок */
+	--button-hover-bg: #0056b3;
+	/* Цвет кнопок при наведении */
+	--footer-bg: #343a40;
+	/* Фон футера */
+	--footer-text: #ffffff;
+	/* Цвет текста футера */
+}
+
+/* Обновленные стили для места сверху и логотипа */
+
+.header {
+	background-color: var(--primary-bg);
+	color: var(--text-color);
+	padding: 10px 0;
+}
+
+.logo-container {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	/* Центрируем логотип по горизонтали */
+}
+
+.logo-container img {
+	width: 225px;
+	height: 60px;
+}
+
+/* Добавленные стили для блока с контактной информацией */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: var(--oxford-blue);
+	color: var(--gold);
+}
+
+.header h1 {
+	font-size: 1.5em;
+	/* Укажите желаемый размер шрифта */
+}
+
+.contact-info {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.logo img {
+	width: 75px;
+	height: 20px;
+}
+
+/* Остальные стили остаются без изменений */
+.container {
+	max-width: 800px;
+	margin: 20px auto;
+	background-color: var(--secondary-bg);
+	color: var(--text-color);
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Обновленные стили для футера */
+
+footer {
+	background-color: var(--footer-bg);
+	color: var(--footer-text);
+	text-align: center;
+	padding: 20px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+/* Обновленные стили для административной панели */
+
+.admin-panel {
+	max-width: 800px;
+	margin: 20px auto;
+	background-color: var(--secondary-bg);
+	color: var(--text-color);
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-panel h2,
+.admin-panel h3 {
+	color: var(--link-color);
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.admin-panel form,
+.admin-panel table {
+	margin-bottom: 20px;
+}
+
+.admin-panel label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: var(--link-color);
+}
+
+.admin-panel input,
+.admin-panel textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ced4da;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.admin-panel input[type="submit"] {
+	background-color: var(--button-bg);
+	color: var(--text-color);
+	cursor: pointer;
+	border: none;
+}
+
+.admin-panel input[type="submit"]:hover {
+	background-color: var(--button-hover-bg);
+}
+
+/* Обновленные стили для таблицы новостей */
+
+.admin-panel table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.admin-panel table th,
+.admin-panel table td {
+	border: 1px solid #ced4da;
+	padding: 10px;
+	text-align: left;
+}
+
+.admin-panel table th {
+	background-color: var(--link-color);
+	color: var(--text-color);
+}
+
+.admin-panel table a {
+	color: var(--link-color);
+	text-decoration: none;
+}
+
+.admin-panel table a:hover {
+	text-decoration: underline;
+}
+
+/* Обновленные стили для панели авторизации */
+
+.login-container {
+	max-width: 400px;
+	margin: 50px auto;
+	background-color: var(--secondary-bg);
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+	color: var(--link-color);
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.login-container form {
+	display: flex;
+	flex-direction: column;
+}
+
+.login-container label {
+	margin-bottom: 10px;
+	font-weight: bold;
+	color: var(--link-color);
+}
+
+.login-container input {
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ced4da;
+	border-radius: 4px;
+}
+
+.login-container input[type="submit"] {
+	background-color: var(--button-bg);
+	color: var(--text-color);
+	cursor: pointer;
+	border: none;
+}
+
+.login-container input[type="submit"]:hover {
+	background-color: var(--button-hover-bg);
 }
