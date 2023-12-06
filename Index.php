@@ -1,18 +1,35 @@
-<?php
-include('db_connection.php');
+<!DOCTYPE html>
+<html lang="en">
 
-$sql = "SELECT * FROM users";
-$result = $conn->query($sql);
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Сайт с базой данных</title>
+</head>
 
-if ($result->num_rows > 0) {
-	echo "<ul>";
-	while ($row = $result->fetch_assoc()) {
-		echo "<li>" . $row["name"] . " - " . $row["email"] . "</li>";
-	}
-	echo "</ul>";
-} else {
-	echo "0 results";
-}
+<body>
+	<div class="container">
+		<h1>Пользователи</h1>
+		<ul>
+			<?php
+			include('db_connection.php');
 
-$conn->close();
-?>
+			$sql = "SELECT * FROM users";
+			$result = $conn->query($sql);
+
+			if ($result->num_rows > 0) {
+				while ($row = $result->fetch_assoc()) {
+					echo "<li>" . $row["name"] . " - " . $row["email"] . "</li>";
+				}
+			} else {
+				echo "<li>Нет пользователей</li>";
+			}
+
+			$conn->close();
+			?>
+		</ul>
+	</div>
+</body>
+
+</html>
