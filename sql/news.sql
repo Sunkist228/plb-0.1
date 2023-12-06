@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 06 2023 г., 20:58
+-- Время создания: Дек 06 2023 г., 21:22
 -- Версия сервера: 8.0.30
 -- Версия PHP: 7.2.34
 
@@ -24,30 +24,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `users`
+-- Структура таблицы `news`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE `news` (
   `id` int NOT NULL,
-  `name` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `email` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL
+  `title` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `content` text COLLATE utf8mb4_general_ci,
+  `publish_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Дамп данных таблицы `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`) VALUES
-(1, '[Egor]', '[korkishko03@bk.ru]');
 
 --
 -- Индексы сохранённых таблиц
 --
 
 --
--- Индексы таблицы `users`
+-- Индексы таблицы `news`
 --
-ALTER TABLE `users`
+ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -55,10 +49,10 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT для таблицы `users`
+-- AUTO_INCREMENT для таблицы `news`
 --
-ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `news`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
