@@ -24,10 +24,18 @@ ul {
 }
 
 li {
-	padding: 10px;
+	padding: 20px;
 	border-bottom: 1px solid #ccc;
 }
 
 li:last-child {
 	border-bottom: none;
+}
+
+h2 {
+	color: #007BFF;
+}
+
+.date {
+	color: #868e96;
 }
